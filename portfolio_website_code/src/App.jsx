@@ -35,7 +35,7 @@ function Hero() {
         <h2 className="hero-title">Software Engineer</h2>
         <p className="hero-bio">
           Virginia Tech graduate with a B.S. in Computer Science. Full-stack engineer with
-          experience across the entire development lifecycle — from architecture to production.
+          experience across the entire development lifecycle from architecture to production.
           I've built systems responsible for over $80M in annual revenue and pioneered agentic AI workflows.
         </p>
         <div className="hero-links">

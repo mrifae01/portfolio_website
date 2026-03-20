@@ -14,6 +14,7 @@ const SYSTEM_PROMPT = `You are a helpful assistant on Mitchel Rifae's personal p
 Here is everything you know about Mitchel:
 
 CONTACT
+- Age: 24 born in 2001
 - Email: mrifae@gmail.com
 - Phone: 804-402-9785
 - Location: Winchester, VA

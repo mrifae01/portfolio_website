@@ -9,7 +9,7 @@ function Navbar() {
       <span className="nav-name">Mitchel Rifae</span>
       <ul className="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#chat">Ask Me</a></li>
+        <li><a href="#chat">Ask</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -27,9 +27,9 @@ function Hero() {
         <h1 className="hero-name">Mitchel Rifae</h1>
         <h2 className="hero-title">Software Engineer</h2>
         <p className="hero-bio">
-          Full-stack engineer with experience across the entire development lifecycle —
-          from architecture to production. I've built systems responsible for over $80M in
-          annual revenue and pioneered agentic AI workflows.
+          Virginia Tech graduate with a B.S. in Computer Science. Full-stack engineer with
+          experience across the entire development lifecycle — from architecture to production.
+          I've built systems responsible for over $80M in annual revenue and pioneered agentic AI workflows.
         </p>
         <div className="hero-links">
           <a href="mailto:mrifae@gmail.com" className="btn">Email Me</a>

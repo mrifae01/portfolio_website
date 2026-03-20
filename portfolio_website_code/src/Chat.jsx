@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 
 export default function Chat() {
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! I'm an AI assistant that knows all about Mitchel. Ask me anything — his experience, skills, projects, or how to reach him." }
+    { role: 'assistant', content: "Hi! I'm an AI assistant that knows all about Mitchel. Ask me anything... his experience, skills, projects, hobbies, or how to reach him." }
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)

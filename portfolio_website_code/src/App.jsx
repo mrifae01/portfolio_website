@@ -1,19 +1,26 @@
+import { useState } from 'react'
 import fibVideo from './assets/videos/Calculated_Fib_Target.mp4'
 import cnnVideo from './assets/videos/cnn-fr-vid.mp4'
 import Chat from './Chat'
 import './App.css'
 
 function Navbar() {
+  const [open, setOpen] = useState(false)
+  const close = () => setOpen(false)
+
   return (
     <nav className="navbar">
       <span className="nav-name">Mitchel Rifae</span>
-      <ul className="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#chat">Ask</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
+      <button className="nav-hamburger" onClick={() => setOpen(o => !o)} aria-label="Toggle menu">
+        <span /><span /><span />
+      </button>
+      <ul className={`nav-links${open ? ' nav-open' : ''}`}>
+        <li><a href="#about" onClick={close}>About</a></li>
+        <li><a href="#chat" onClick={close}>Ask</a></li>
+        <li><a href="#experience" onClick={close}>Experience</a></li>
+        <li><a href="#projects" onClick={close}>Projects</a></li>
+        <li><a href="#skills" onClick={close}>Skills</a></li>
+        <li><a href="#education" onClick={close}>Education</a></li>
       </ul>
     </nav>
   )
@@ -94,7 +101,18 @@ function Experience() {
 function Projects() {
   const projects = [
     {
-      name: 'EDGE Options',
+      name: 'AI Vision Assistant (2026)',
+      description: 'Voice-activated AI assistant built with Python and Google Gemini that listens for wake words, captures live webcam frames, and responds verbally. This project enables hands-free, vision-aware question answering in real time.',
+      bullets: [
+        'Wake word detection with adaptive audio threshold tuning triggers continuous voice command transcription via Google Speech-to-Text.',
+        'Background camera thread keeps the webcam warm at 1080p/30fps, auto-capturing frames when visual keywords are detected in the query.',
+        'Multi-model Gemini fallback cascade (2.5-flash → 2.5-flash-lite → 2.0-flash-lite) handles both text and image-grounded queries with concise spoken responses via Windows SAPI.',
+      ],
+      tech: ['Python', 'Google Gemini API', 'OpenCV', 'SpeechRecognition', 'Windows SAPI (TTS)'],
+      video: null,
+    },
+    {
+      name: 'EDGE Options (2026)',
       description: 'Full-stack algorithmic options trading system built with Python (FastAPI) and React, integrating with the Alpaca brokerage API to automate trade execution, position monitoring, and dynamic stop-loss/take-profit management.',
       bullets: [
         'Real-time trading dashboard with Lightweight Charts, live P&L tracking, and a stock screener with earnings date alerts.',
@@ -105,7 +123,18 @@ function Projects() {
       video: null,
     },
     {
-      name: 'CNN Facial Recognition System',
+      name: 'ESP32 WiFi Smart Switch (Work in Progress)',
+      description: 'Battery-powered smart light switch built with an ESP32 and servo motor that physically toggles a wall switch via a browser-based interface over WiFi. Designed to be wall-mounted in a 3D printed enclosure with no rewiring of existing electrical infrastructure.',
+      bullets: [
+        'ESP32 hosts a WiFi HTTP web server serving a mobile-friendly ON/OFF control page, allowing the servo to physically flip a wall switch from any device on the local network.',
+        'MG996R servo motor attached to GPIO 26 with tuned pulse width range (500-2400µs) delivers a full 180° sweep to reliably actuate the physical switch in both directions.',
+        'Light sleep mode and reduced WiFi transmit power (7dBm) minimize idle current draw, extending 4x AA battery life from weeks to several months between changes.',
+      ],
+      tech: ['C++', 'Arduino IDE', 'ESP32', 'MG996R Servo Motor', 'WiFi HTTP Server'],
+      video: null,
+    },
+    {
+      name: 'CNN Facial Recognition System (2023)',
       description: 'Python-based facial recognition system using TensorFlow, Keras, OpenCV, and Tkinter. Trains a CNN model to grant or deny access based on real-time camera input.',
       bullets: [
         'Custom CNN architecture trained on captured facial data.',
@@ -116,7 +145,7 @@ function Projects() {
       video: cnnVideo,
     },
     {
-      name: 'Fibonacci Retracement Indicator',
+      name: 'Fibonacci Retracement Indicator (2022)',
       description: 'Custom indicator built on TradingView using Pine Script. Automates a structured Fibonacci retracement theory to identify intraday targets, support/resistance zones, and reversal points.',
       bullets: [
         'Before the first 30-min candle close, draws a fib retracement from candle OPEN to PCP — the 161.8% acts as the first 30-min target/reversal point.',
@@ -136,13 +165,15 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((p) => (
           <div key={p.name} className="project-card">
-            {p.video && (
+            {p.video ? (
               <video
                 className="project-video"
                 src={p.video}
                 controls
                 playsInline
               />
+            ) : (
+              <div className="video-coming-soon">🎬 Video Coming Soon</div>
             )}
             <div className="project-body">
               <h3 className="project-name">{p.name}</h3>
@@ -165,7 +196,7 @@ function Skills() {
   const categories = [
     {
       label: 'Programming',
-      items: ['Python', 'JavaScript', 'Java', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'React', 'Node', 'FlaskAPI', 'FastAPI', 'Azure'],
+      items: ['Python', 'JavaScript', 'Java', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'React', 'Node', 'FlaskAPI', 'FastAPI', 'Azure', 'Arduino'],
     },
     {
       label: 'AI Integration',

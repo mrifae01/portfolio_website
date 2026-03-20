@@ -62,7 +62,23 @@ TECHNICAL SKILLS
 
 OTHER
 - Served as internal team tech lead at OptumRX, onboarding new engineers and providing bi-weekly mentorship.
-- National Honor Society — volunteered at VSA (Very Special Arts) for 2 years to help special needs kids pursue performing arts.`
+- National Honor Society — volunteered at VSA (Very Special Arts) for 2 years to help special needs kids pursue performing arts.
+
+HOBBIES (LIKES TO DO IN FREE TIME)
+- Big soccer fan, I have been playing since I was 4 years old and even have done some part coaching. I played competitively through high school and now enjoy playing recreationally in College. I grew up supporting Barcelona and as all my friends are premier league fans, I have also become a big fan of Arsenal. 
+- I also enjoy weight lifting and fitness in general. I feel like it brings a good balance to the mental work of software engineering and is a great way to relieve stress. I have been weight lifting for about 4 years now and try to go to the gym at least 5 times a week.
+- I've been trading stocks and options for around 4 years. I enjoy it as a way to apply programming skills to real-world financial problems. It sits right at the intersection of data, logic, and risk management.
+- My newest interest. I enjoy building my own components and circuits as a way to take coding into the physical world. There's something satisfying about creating something tangible you can actually hold, not just software running on a screen.
+
+STRENGTHS
+- Fast learner: I quickly pick up new technologies and concepts, which allows me to contribute effectively in new environments.
+- Extreme work ethic: I am highly motivated and consistently go above and beyond to deliver high-quality results.
+- Full-stack development: I have experience across the entire development lifecycle, from architecture to production deployment.
+- AI integration: I have hands-on experience building agentic AI workflows that drive real business impact.
+- Collaboration: I work well in teams and have experience leading and mentoring others.
+
+
+`
 
 const model = genAI.getGenerativeModel({
   model: 'gemini-2.5-flash-lite',

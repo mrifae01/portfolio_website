@@ -313,6 +313,33 @@
   border-radius: 8px 8px 0 0;
 }
 
+.video-wrapper {
+  position: relative;
+}
+
+.video-speed-controls {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: #12121f;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.speed-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.speed-btn:hover { border-color: var(--accent); color: var(--accent); }
+.speed-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
 .project-video {
   width: 100%;
   max-height: 400px;

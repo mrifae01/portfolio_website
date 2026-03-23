@@ -1,6 +1,42 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+
+const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2]
+
+function VideoPlayer({ src }) {
+  const videoRef = useRef(null)
+  const [speed, setSpeed] = useState(1)
+
+  function changeSpeed(s) {
+    setSpeed(s)
+    if (videoRef.current) videoRef.current.playbackRate = s
+  }
+
+  return (
+    <div className="video-wrapper">
+      <video
+        ref={videoRef}
+        className="project-video"
+        src={src}
+        controls
+        playsInline
+      />
+      <div className="video-speed-controls">
+        {SPEEDS.map(s => (
+          <button
+            key={s}
+            className={`speed-btn${speed === s ? ' active' : ''}`}
+            onClick={() => changeSpeed(s)}
+          >
+            {s}x
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
 import fibVideo from './assets/videos/Calculated_Fib_Target.mp4'
 import cnnVideo from './assets/videos/cnn-fr-vid.mp4'
+import aiVisionVideo from './assets/videos/AI_Vision_Vid_compressed.mp4'
 import Chat from './Chat'
 import './App.css'
 
@@ -109,7 +145,7 @@ function Projects() {
         'Multi-model Gemini fallback cascade (2.5-flash → 2.5-flash-lite → 2.0-flash-lite) handles both text and image-grounded queries with concise spoken responses via Windows SAPI.',
       ],
       tech: ['Python', 'Google Gemini API', 'OpenCV', 'SpeechRecognition', 'Windows SAPI (TTS)'],
-      video: null,
+      video: aiVisionVideo,
     },
     {
       name: 'EDGE Options (2026)',
@@ -166,12 +202,7 @@ function Projects() {
         {projects.map((p) => (
           <div key={p.name} className="project-card">
             {p.video ? (
-              <video
-                className="project-video"
-                src={p.video}
-                controls
-                playsInline
-              />
+              <VideoPlayer src={p.video} />
             ) : (
               <div className="video-coming-soon">🎬 Video Coming Soon</div>
             )}

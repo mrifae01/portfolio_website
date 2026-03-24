@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Analytics } from "@vercel/analytics/next"
 
 const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2]
 
@@ -296,6 +297,7 @@ function App() {
         <Education />
       </main>
       <Footer />
+      <Analytics />
     </>
   )
 }

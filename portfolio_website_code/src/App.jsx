@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2]
 

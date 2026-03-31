@@ -38,6 +38,7 @@ function VideoPlayer({ src }) {
 import fibVideo from './assets/videos/Calculated_Fib_Target.mp4'
 import cnnVideo from './assets/videos/cnn-fr-vid.mp4'
 import aiVisionVideo from './assets/videos/AI_Vision_Vid_compressed.mp4'
+import edgeVideo from './assets/videos/Edge_Options_Demo_compressed.mp4'
 import Chat from './Chat'
 import './App.css'
 
@@ -138,6 +139,17 @@ function Experience() {
 function Projects() {
   const projects = [
     {
+      name: 'EDGE Options (2026)',
+      description: 'Full-stack algorithmic options trading system built with Python (FastAPI) and React, integrating with the Alpaca brokerage API to automate trade execution, position monitoring, and dynamic stop-loss/take-profit management.',
+      bullets: [
+        'Real-time trading dashboard with Lightweight Charts, live P&L tracking, and a stock screener with earnings date alerts.',
+        'Robust risk management: configurable hard stop enforcement, partial take-profit triggers, and a multi-source earnings data pipeline.',
+        'Persistent position state across sessions using contract-keyed localStorage.',
+      ],
+      tech: ['Python', 'FastAPI', 'React', 'Alpaca API', 'Lightweight Charts'],
+      video: edgeVideo,
+    },
+    {
       name: 'AI Vision Assistant (2026)',
       description: 'Voice-activated AI assistant built with Python and Google Gemini that listens for wake words, captures live webcam frames, and responds verbally. This project enables hands-free, vision-aware question answering in real time.',
       bullets: [
@@ -147,17 +159,6 @@ function Projects() {
       ],
       tech: ['Python', 'Google Gemini API', 'OpenCV', 'SpeechRecognition', 'Windows SAPI (TTS)'],
       video: aiVisionVideo,
-    },
-    {
-      name: 'EDGE Options (2026)',
-      description: 'Full-stack algorithmic options trading system built with Python (FastAPI) and React, integrating with the Alpaca brokerage API to automate trade execution, position monitoring, and dynamic stop-loss/take-profit management.',
-      bullets: [
-        'Real-time trading dashboard with Lightweight Charts, live P&L tracking, and a stock screener with earnings date alerts.',
-        'Robust risk management: configurable hard stop enforcement, partial take-profit triggers, and a multi-source earnings data pipeline.',
-        'Persistent position state across sessions using contract-keyed localStorage.',
-      ],
-      tech: ['Python', 'FastAPI', 'React', 'Alpaca API', 'Lightweight Charts'],
-      video: null,
     },
     {
       name: 'ESP32 WiFi Smart Switch (Work in Progress)',

@@ -139,6 +139,18 @@ function Experience() {
 function Projects() {
   const projects = [
     {
+      name: 'HeadRoom Budget (https://headroombudget.com/)',
+      description: 'Full-stack personal finance web app built from the ground up using React Native (Expo) with web-first support, an Express.js backend hosted on Railway, and Supabase for authentication and persistent storage. Built with Claude Code as an AI pair programmer throughout — a direct example of how AI-assisted development can compress months of work into a focused, iterative build cycle without sacrificing code quality.',
+      bullets: [
+        'Integrated the Teller bank API using mutual TLS authentication, enabling users to securely connect real bank accounts and pull live transaction data — with custom logic to correctly handle sign-convention differences between debit and credit card accounts.',
+        'Claude-powered budget advisor ingests live financial data (income, spending categories, debts, recent transactions) to provide conversational guidance, flag overspending, and propose category limit adjustments users can apply with a single tap.',
+        'Dashboard surfaces locally-computed AI insights: month-over-month spending trend analysis, automatic merchant-type categorization, and smart tips that adapt based on over/under budget status per category.',
+        'Dedicated bank analysis flow uses Claude to scan months of transaction history and generate a fully personalized budget setup — income sources, spending limits, and debt payments — tailored to how the user actually spends.',
+      ],
+      tech: ['Claude Code','React Native', 'Expo', 'Express.js', 'Supabase', 'Teller API', 'Claude API', 'Railway'],
+      video: null,
+    },
+    {
       name: 'EDGE Options (2026)',
       description: 'Full-stack algorithmic options trading system built with Python (FastAPI) and React, integrating with the Alpaca brokerage API to automate trade execution, position monitoring, and dynamic stop-loss/take-profit management.',
       bullets: [
@@ -161,7 +173,7 @@ function Projects() {
       video: aiVisionVideo,
     },
     {
-      name: 'ESP32 WiFi Smart Switch (Work in Progress)',
+      name: 'ESP32 WiFi Smart Switch (2026)',
       description: 'Battery-powered smart light switch built with an ESP32 and servo motor that physically toggles a wall switch via a browser-based interface over WiFi. Designed to be wall-mounted in a 3D printed enclosure with no rewiring of existing electrical infrastructure.',
       bullets: [
         'ESP32 hosts a WiFi HTTP web server serving a mobile-friendly ON/OFF control page, allowing the servo to physically flip a wall switch from any device on the local network.',

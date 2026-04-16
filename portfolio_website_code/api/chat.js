@@ -30,6 +30,15 @@ Intern — AFCOM Potomac (June 2023 - August 2023)
 
 PERSONAL PROJECTS
 
+HeadRoom Budget (https://headroombudget.com/)
+- Full-stack personal finance web app built from the ground up using React Native (Expo) with web-first support, an Express.js backend hosted on Railway, and Supabase for authentication and persistent storage.
+- Built with Claude Code as an AI pair programmer throughout — a direct example of how AI-assisted development can compress months of work into a focused, iterative build cycle without sacrificing code quality.
+- Integrated the Teller bank API using mutual TLS authentication, enabling users to securely connect real bank accounts and pull live transaction data — with custom logic to handle sign-convention differences between debit and credit card accounts.
+- Claude-powered budget advisor ingests live financial data (income, spending categories, debts, recent transactions) to provide conversational guidance, flag overspending, and propose category limit adjustments users can apply with a single tap.
+- Dashboard surfaces locally-computed AI insights: month-over-month spending trend analysis, automatic merchant-type categorization, and smart tips that adapt based on over/under budget status per category.
+- Dedicated bank analysis flow uses Claude to scan months of transaction history and generate a fully personalized budget setup tailored to how the user actually spends.
+- Tech stack: Claude Code, React Native, Expo, Express.js, Supabase, Teller API, Claude API, Railway
+
 AI Vision Assistant (2026)
 - Voice-activated AI assistant built with Python and Google Gemini that listens for wake words, captures live webcam frames, and responds verbally.
 - Wake word detection with adaptive audio threshold tuning triggers continuous voice command transcription via Google Speech-to-Text.

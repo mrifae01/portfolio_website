@@ -8,15 +8,28 @@ CONTACT
 - Email: mrifae@gmail.com
 - Phone: 804-402-9785
 - Location: Winchester, VA
+- Resume: downloadable via the "Resume" button at the top of this page. If someone asks for his resume or CV, point them to that button.
 
 OVERVIEW
-Mitchel is a software engineer with hands-on experience across the full development lifecycle, from architecture to production deployment. He has a proven track record building high-impact internal applications, including systems responsible for over $80M in annual revenue, and pioneering agentic AI workflows. He quickly learns new technologies and begins immediately creating production-level code as a team member or independent developer.
+Mitchel is a full-stack software engineer with 3+ years building AI-powered, production-grade applications in Python, React, and Svelte. He is currently a founding engineer at DriveUpSales.ai, driving end-to-end feature delivery, data quality, and AI systems for enterprise automotive clients. He has a proven track record building high-impact applications, including systems responsible for over $80M in annual revenue, and pioneering agentic AI workflows. He quickly learns new technologies and begins immediately creating production-level code as a team member or independent developer.
 
 EDUCATION
 - B.S. Computer Science, Virginia Tech — College of Engineering
 - August 2020 - December 2023
 
+CERTIFICATIONS
+- AWS Certified Cloud Practitioner (Amazon Web Services) — issued Feb 2024, expires Feb 2027
+
 WORK EXPERIENCE
+
+Founding Engineer — DriveUpSales.ai (April 2026 - Present)  ← CURRENT ROLE
+DriveUpSales.ai is an AI sales-enablement platform for automotive dealer groups, including Kunes, the largest dealer group in the Midwest.
+- As a founding engineer, owns end-to-end delivery of client-requested features across a Python and SvelteKit full stack, deployed on GCP and secured via Cloudflare — wearing product, engineering, and data roles.
+- Architected a unified data layer connecting dealership call-tracking, CRM, and inventory systems (CallRevu, VinSolutions, Auto/Mate, DriveCentric, Dealertrack, vAuto, and others) into a single source of truth.
+- Built AI systems that transcribe and score every sales call using Google Speech-to-Text and LLMs (Gemini, OpenAI), auto-generating rep coaching summaries and powering the DUS Assistant — a per-rooftop AI copilot for reps, managers, and admins.
+- Developed automatic customer-profile creation and real-time inventory matching that resurfaces dead leads as new deals when a previously wanted vehicle lands on the lot, plus manager-facing dashboards for full visibility into rep activity.
+- Helped secure the company's first paid pilot, contributing roughly $12,000 in initial revenue.
+- Tech stack: Python, SvelteKit, TypeScript, Supabase/Postgres, GCP, Cloudflare, Google Speech-to-Text, Gemini, OpenAI
 
 Software Engineer — OptumRX, UHG (July 2024 - April 2026)
 - Owned and delivered continuous production enhancements to a Python-Flask internal application directly responsible for over $80M in annual revenue to OptumRX.
@@ -66,9 +79,12 @@ Fibonacci Retracement Indicator (TradingView / Pine Script)
 - Identifies 161.8% targets, 61.8% support/resistance zones, and cascade logic for extended moves.
 
 TECHNICAL SKILLS
-- Programming: Python, JavaScript, C++, C, HTML, CSS, SQL, React, Node, FlaskAPI, FastAPI, Azure
-- AI Integration: LangGraph, CrewAI, OpenAI, Claude, Gemini
-- Collaboration: GitHub, Scrum, Agile, Rally, Miro, Teams
+- Languages: Python, JavaScript, TypeScript, Java, C++, C, SQL, HTML, CSS
+- Frameworks & Libraries: React, Svelte, SvelteKit, Node.js, Express, Flask, FastAPI, LangGraph, CrewAI, Supabase
+- AI & Machine Learning: OpenAI API, Claude / Claude Code, Gemini, Google Speech-to-Text, agentic AI workflows, multi-agent systems
+- Cloud & DevOps: GCP, Cloudflare, AWS (Cloud Practitioner Certified), Azure, Vercel, Railway, GitHub CI/CD
+- Data & Integration: REST APIs, SFTP data pipelines, CRM/DMS integrations, SQL query optimization, Progressive Web Apps (PWA)
+- Collaboration: GitHub, Scrum, Agile, Jira/Rally, Miro, Teams
 
 OTHER
 - Served as internal team tech lead at OptumRX, onboarding new engineers and providing bi-weekly mentorship.

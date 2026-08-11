@@ -70,14 +70,22 @@ function Hero() {
       <div className="hero-content">
         <p className="hero-greeting">Hi, I'm</p>
         <h1 className="hero-name">Mitchel Rifae</h1>
-        <h2 className="hero-title">Software Engineer</h2>
+        <h2 className="hero-title">Founding Engineer @ DriveUpSales.ai</h2>
         <p className="hero-bio">
           Virginia Tech graduate with a B.S. in Computer Science. Full-stack engineer with
           experience across the entire development lifecycle from architecture to production.
-          I've built systems responsible for over $80M in annual revenue and pioneered agentic AI workflows.
+          Currently a founding engineer building AI-powered sales-enablement software for enterprise
+          automotive dealer groups — previously built systems responsible for over $80M in annual
+          revenue and pioneered agentic AI workflows.
         </p>
         <div className="hero-links">
           <a href="mailto:mrifae@gmail.com" className="btn">Email Me</a>
+          <a href="/Mitchel_Rifae_Resume.pdf" download className="btn btn-resume">
+            <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" />
+            </svg>
+            Resume
+          </a>
           <a href="https://github.com/mrifae01" target="_blank" rel="noreferrer" className="btn btn-outline">GitHub</a>
           <a href="https://www.linkedin.com/in/mitchel-rifae-264870242" target="_blank" rel="noreferrer" className="btn btn-outline">LinkedIn</a>
         </div>
@@ -89,6 +97,20 @@ function Hero() {
 
 function Experience() {
   const jobs = [
+    {
+      title: 'Founding Engineer',
+      company: 'DriveUpSales.ai',
+      period: 'April 2026 - Present',
+      current: true,
+      blurb: 'AI sales-enablement platform for automotive dealer groups, including Kunes, the largest dealer group in the Midwest.',
+      bullets: [
+        'As a founding engineer, own end-to-end delivery of client-requested features across a Python and SvelteKit full stack, deployed on GCP and secured via Cloudflare — wearing product, engineering, and data roles.',
+        'Architected a unified data layer connecting dealership call-tracking, CRM, and inventory systems (CallRevu, VinSolutions, Auto/Mate, DriveCentric, Dealertrack, vAuto, and others) into a single source of truth.',
+        'Built AI systems that transcribe and score every sales call using Google Speech-to-Text and LLMs (Gemini, OpenAI), auto-generating rep coaching summaries and powering the DUS Assistant — a per-rooftop AI copilot for reps, managers, and admins.',
+        'Developed automatic customer-profile creation and real-time inventory matching that resurfaces dead leads as new deals when a previously wanted vehicle lands on the lot, plus manager-facing dashboards for full visibility into rep activity.',
+        "Helped secure the company's first paid pilot, contributing roughly $12,000 in initial revenue.",
+      ],
+    },
     {
       title: 'Software Engineer',
       company: 'OptumRX, UHG',
@@ -119,11 +141,15 @@ function Experience() {
           <div key={job.company} className="timeline-item">
             <div className="timeline-header">
               <div>
-                <h3 className="job-title">{job.title}</h3>
+                <h3 className="job-title">
+                  {job.title}
+                  {job.current && <span className="job-current-badge">Current</span>}
+                </h3>
                 <span className="job-company">{job.company}</span>
               </div>
               <span className="job-period">{job.period}</span>
             </div>
+            {job.blurb && <p className="job-blurb">{job.blurb}</p>}
             <ul className="job-bullets">
               {job.bullets.map((b, i) => (
                 <li key={i}>{b}</li>
@@ -241,15 +267,19 @@ function Skills() {
   const categories = [
     {
       label: 'Programming',
-      items: ['Python', 'JavaScript', 'Java', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'React', 'Node', 'FlaskAPI', 'FastAPI', 'Azure', 'Arduino'],
+      items: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'React', 'Svelte', 'SvelteKit', 'Node', 'Express', 'FlaskAPI', 'FastAPI', 'Arduino'],
     },
     {
       label: 'AI Integration',
-      items: ['LangGraph', 'CrewAI', 'OpenAI', 'Claude', 'Gemini'],
+      items: ['LangGraph', 'CrewAI', 'OpenAI', 'Claude', 'Claude Code', 'Gemini', 'Google Speech-to-Text', 'Multi-Agent Systems'],
+    },
+    {
+      label: 'Cloud & Data',
+      items: ['GCP', 'Cloudflare', 'AWS', 'Azure', 'Vercel', 'Railway', 'Supabase', 'REST APIs', 'CRM/DMS Integrations'],
     },
     {
       label: 'Collaboration',
-      items: ['GitHub', 'Scrum', 'Agile', 'Rally', 'Miro', 'Teams'],
+      items: ['GitHub', 'Scrum', 'Agile', 'Rally', 'Jira', 'Miro', 'Teams'],
     },
   ]
 
